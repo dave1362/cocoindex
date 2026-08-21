@@ -12,7 +12,7 @@ Podcasts are one of the richest sources of expert knowledge on the internet. A s
 
 In this tutorial, we'll build a [CocoIndex](https://github.com/cocoindex-io/cocoindex) pipeline that turns YouTube podcast episodes into a queryable knowledge graph. It downloads audio, transcribes with speaker diarization, uses an LLM to extract structured statements and entities, resolves duplicates across episodes, and stores everything in [SurrealDB](https://github.com/surrealdb/surrealdb) as a graph.
 
-![Podcast episodes flowing through CocoIndex with typed LLM extraction into a SurrealDB knowledge graph](https://cocoindex.io/blobs/docs-v1/img/examples/podcast-to-knowledge-graph/diagram.png)
+![Podcast episodes flowing through CocoIndex with typed LLM extraction into a SurrealDB knowledge graph](https://cocoindex.io/blobs/docs-v1/img/examples/podcast-to-knowledge-graph/overview.png)
 
 The whole pipeline is ordinary `async` Python and your own types. The heavy lifting — [incremental processing](https://cocoindex.io/docs/programming_guide/core_concepts/), change tracking, managed graph targets — runs in a Rust engine underneath, so re-running only processes new or changed episodes.
 
